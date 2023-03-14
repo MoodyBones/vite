@@ -1,3 +1,10 @@
+class Stack {
+  constructor() {
+    this.top = -1
+    this.items = {}
+  }
+}
+
 describe('My Stack', () => {
   it('is created empty', () => {
     // instantiate a class that doesn't exist to represent the object we're testing
