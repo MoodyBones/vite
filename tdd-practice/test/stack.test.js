@@ -26,7 +26,11 @@ describe('My Stack', () => {
     expect(stack.items).toEqual({})
   })
 
-  it.todo('can push to the top')
+  it('can push to the top', () => {
+    stack.push('🥑')
+    expect(stack.top).toBe(0)
+    expect(stack.peek).toBe('🥑') // peek is a method that returns the top item
+  })
 
   it.todo('can pop off')
 })
