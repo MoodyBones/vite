@@ -6,9 +6,16 @@ class Stack {
 }
 
 describe('My Stack', () => {
+  let stack
+
+  // add hook that runs before each test, so we don't need to set it up manually in each test
+  beforeEach(() => {
+    stack = new Stack()
+  })
+
   it('is created empty', () => {
     // instantiate a class that doesn't exist to represent the object we're testing
-    const stack = new Stack()
+    // const stack = new Stack() // refactored to reduce duplication
 
     // make sure our code does whats expected
     // because top is empty when it's first created the value should be -1
