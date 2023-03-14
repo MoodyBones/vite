@@ -12,6 +12,13 @@ class Stack {
     this.top++
     this.items[this.top] = item
   }
+
+  pop() {
+    const item = this.items[this.top]
+    delete this.items[this.top]
+    this.top--
+    return item
+  }
 }
 
 describe('My Stack', () => {
@@ -41,5 +48,11 @@ describe('My Stack', () => {
     expect(stack.peek).toBe('🥑') // peek is a method that returns the top item
   })
 
-  it.todo('can pop off')
+  it('can pop off', () => {
+    stack.push('🥑')
+    expect(stack.top).toBe(0)
+    expect(stack.peek).toBe('🥑')
+    stack.pop()
+    expect(stack.top).toBe(-1)
+  })
 })
