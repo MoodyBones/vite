@@ -6,3 +6,6 @@ test('cumulative sum of an array', () => {
   expect(cumulativeSum([1, 2, 3, 4, 5])).toBe(15);
   expect(cumulativeSum([-2, -4, -8])).toBe(-14);
 });
+
+// TODO: write test for binary search
+// TODO: write test for LRU cache
